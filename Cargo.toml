@@ -1,0 +1,16 @@
+[package]
+name = "sage"
+version = "0.1.0"
+edition = "2018"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+winapi = { version = "0.3.9", features = ["dwrite", "dwrite_1","dxgi", "d3d11", "d2d1", "stralign", "handleapi", "winuser", "memoryapi", "processthreadsapi", "winnt", "windef", "memoryapi", "minwindef", "tlhelp32", "psapi"] }
+colour = "0.6.0"
+discord-rich-presence = "0.1.7"
